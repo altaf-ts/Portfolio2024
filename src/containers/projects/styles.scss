@@ -1,4 +1,4 @@
-.portfolio {
+.projects {
   &__content {
     padding: 20px;
     width: 100%;
@@ -41,7 +41,7 @@
         cursor: pointer;
         position: relative;
         
-        &:hover .overlay{
+        &:hover .overlay {
             opacity: 1;
         }
 
@@ -71,14 +71,14 @@
             transition: 0.5s ease;
             background-color: var(--yellow-theme-main-color);
 
-            div{
+            div {
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
                 text-align: center;
 
-                p{
+                p {
                     color: #000000;
                     margin: 0px;
                     font-size: 4rem;
@@ -88,17 +88,16 @@
                     animation: typingEffect 1s steps(30,end);
                 }
 
-                button{
+                button {
                     cursor: pointer;
                     margin-top: 16px;
                     padding: 10px 70px;
                     font-size: 2rem;
                     background: transparent;
                     color: #000;
-                    border : 1.5px solid #000;
+                    border: 1.5px solid #000;
                     border-radius: 4px;
                     font-weight: 500;
-
                 }
             }
         }
@@ -107,38 +106,36 @@
   }
 }
 
-@media only screen and (max-width: 480px){
-    .portfolio__content__filter > li{
+@media only screen and (max-width: 480px) {
+    .projects__content__filter > li {
         font-size: 11px;
     }
 
-    .portfolio__content__cards{
-        grid-template-columns: repeat(1,1fr);
+    .projects__content__cards {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 767px){
-    .portfolio__content__filter > li{
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .projects__content__filter > li {
         font-size: 14px;
     }
 
-    .portfolio__content__cards{
-        grid-template-columns: repeat(2,1fr);
+    .projects__content__cards {
+        grid-template-columns: repeat(2, 1fr);
 
-        &__item{
-
-            .overlay{
+        &__item {
+            .overlay {
                 div > p {
                      font-size: 2.5rem;
                 }
             }
         }
     }
-
 }
 
-@keyframes typingEffect{
-    from{
+@keyframes typingEffect {
+    from {
         width: 0;
     }
 
@@ -146,5 +143,3 @@
         width: 100%;
     }
 }
-
-

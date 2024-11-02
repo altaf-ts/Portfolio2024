@@ -1,0 +1,63 @@
+.experience {
+  height: 100%;
+  padding: 20px;
+
+  .timeline {
+    position: relative; // Enable positioning for absolute elements
+    padding: 20px;
+
+    &::before {
+      content: ''; // Create a vertical line
+      position: absolute;
+      left: 20px; // Adjust left position for vertical line
+      top: 0;
+      bottom: 0;
+      width: 4px; // Width of the timeline line
+      background: var(--yellow-theme-main-color); // Color of the timeline line
+      border-radius: 2px; // Optional: rounded corners
+    }
+
+    .timeline__experience__vertical-timeline-element {
+      display: flex; // Flexbox for image and text alignment
+      align-items: center; // Center the items vertically
+      position: relative; // Position for absolute child elements
+      margin: 20px 0; // Space between elements
+      padding-left: 40px; // Space from the vertical line
+
+      .experience-card__image {
+        width: 400px; // Set an appropriate width
+        height: 60px; // Set an appropriate height
+        border-radius: 50%; // Circular image
+        object-fit: cover; // Maintain aspect ratio
+        position: absolute; // Position image relative to the timeline
+        left: -30px; // Adjust left position for image alignment
+      }
+
+      .timeline__content {
+        background: white; // Background color for content
+        padding: 10px; // Padding for content
+        border-radius: 8px; // Rounded corners for content
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Optional: add shadow for depth
+
+        .experience-card__title {
+          color: var(--yellow-theme-sub-text-color); // Title color
+          margin: 0; // Remove default margin
+          font-weight: bold; // Make title bold
+          font-size: larger; // Make title larger
+        }
+
+        .experience-card__institution {
+          color: var(--yellow-theme-sub-text-color); // Subtitle color
+          margin: 0; // Remove default margin
+          font-size: medium; // Set subtitle font size to medium
+        }
+
+        .experience-card__date {
+          color: var(--yellow-theme-sub-text-color); // Date color
+          margin-top: 5px; // Add margin for spacing
+          font-size: medium; // Set date font size to medium
+        }
+      }
+    }
+  }
+}

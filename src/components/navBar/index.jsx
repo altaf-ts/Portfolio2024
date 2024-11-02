@@ -17,13 +17,18 @@ const data = [
     to: "/skills",
   },
   {
-    label: "RESUME",
-    to: "/resume",
+    label: "EDUCATION",
+    to: "/education",
   },
   {
-    label: "PORTFOLIO",
-    to: "/portfolio",
+    label: "EXPERIENCE", 
+    to: "/experience",
   },
+  {
+    label: "PROJECTS",
+    to: "/projects",
+  },
+
   {
     label: "CONTACT",
     to: "/contact",

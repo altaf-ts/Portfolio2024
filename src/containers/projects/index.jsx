@@ -9,10 +9,10 @@ import ImageFive from "../../images/image5.jpg";
 import "./styles.scss";
 import { useState } from "react";
 
-const portfolioData = [
+const projectsData = [
   {
     id: 2,
-    name: "Ecommerce",
+    name: "Netflix Clone",
     image: ImageOne,
     link: "",
   },
@@ -58,7 +58,7 @@ const filterData = [
   },
 ];
 
-const Portfolio = () => {
+const Projects = () => {
   const [filteredvalue, setFilteredValue] = useState(1);
   const [hoveredValue, setHoveredValue] = useState(null);
 
@@ -76,19 +76,19 @@ const Portfolio = () => {
 
   const filteredItems =
     filteredvalue === 1
-      ? portfolioData
-      : portfolioData.filter((item) => item.id === filteredvalue);
+      ? projectsData
+      : projectsData.filter((item) => item.id === filteredvalue);
 
   console.log(filteredItems);
 
   return (
-    <section id="portfolio" className="portfolio">
+    <section id="projects" className="projects">
       <PageHeaderContent
-        headerText="My Portfolio"
+        headerText="My Projects"
         icon={<BsInfoCircleFill size={40} />}
       />
-      <div className="portfolio__content">
-        <ul className="portfolio__content__filter">
+      <div className="projects__content">
+        <ul className="projects__content__filter">
           {filterData.map((item) => (
             <li
               className={item.filterId === filteredvalue ? "active" : ""}
@@ -99,18 +99,19 @@ const Portfolio = () => {
             </li>
           ))}
         </ul>
-        <div className="portfolio__content__cards">
+        <div className="projects__content__cards">
           {filteredItems.map((item, index) => (
             <div
-              className="portfolio__content__cards__item"
+              className="projects__content__cards__item"
               key={`cardItem${item.name.trim()}`}
               onMouseEnter={() => handleHover(index)}
               onMouseLeave={() => handleHover(null)}
             >
-              <div className="portfolio__content__cards__item__img-wrapper">
-                <a>
-                  <img alt="dummy data" src={item.image} />
-                </a>
+              <div className="projects__content__cards__item__img-wrapper">
+              <a href={item.link || "#"} target="_blank" rel="noopener noreferrer">
+                <img alt="dummy data" src={item.image} />
+              </a>
+
               </div>
               <div className="overlay">
                 {index === hoveredValue && (
@@ -127,4 +128,4 @@ const Portfolio = () => {
     </section>
   );
 };
-export default Portfolio;
+export default Projects;

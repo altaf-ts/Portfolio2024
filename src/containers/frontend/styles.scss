@@ -1,0 +1,27 @@
+.frontend {
+    padding: 20px;
+    background-color: aqua;
+  }
+  
+  .frontend-nav {
+    margin-bottom: 20px;
+  }
+  
+  .frontend-nav__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .frontend-nav__item {
+    margin-right: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--primary-color); // Define your primary color in your variables
+    transition: color 0.3s;
+  
+    &:hover {
+      color: var(--hover-color); // Define your hover color
+    }
+  }
+  

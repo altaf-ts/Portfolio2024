@@ -4,9 +4,10 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Home from "./containers/home";
 import About from "./containers/about";
-import Resume from "./containers/resume";
+import Education from './containers/education'; // Make sure this path is correct
+import Experience from './containers/experience'; 
 import Skills from "./containers/skills";
-import Portfolio from "./containers/portfolio";
+import Projects from "./containers/projects";
 import Contact from "./containers/contact";
 import Navbar from "./components/navBar";
 import particles from "./utils.js/particles";
@@ -24,7 +25,6 @@ function App() {
   return (
     <div className="App">
       {/* particles js */}
-
       {renderParticleJsInHomePage && (
         <Particles id="particles" options={particles} init={handleInit} />
       )}
@@ -34,16 +34,16 @@ function App() {
 
       {/* main page content */}
       <div className="App__main-page-content">
-      <Routes>
-        <Route index path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+        <Routes>
+          <Route index path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/education" element={<Education />} /> {/* Updated line */}
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
-
     </div>
   );
 }

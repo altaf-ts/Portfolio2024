@@ -5,8 +5,16 @@ import { Animate, AnimateKeyframes } from "react-simple-animate";
 import PageHeaderContent from "../../components/pageHeaderContent";
 import { skillsData } from "./utils";
 import './styles.scss';
+import { useNavigate } from "react-router-dom";
 
 const Skills = () => {
+  const navigate = useNavigate();
+
+  const handleCategoryClick = (label) => {
+    // Navigate to the new page when a category is clicked
+    navigate(`/skills/${label.toLowerCase().replace(/\s/g, '-')}`); // Example: /skills/front-end
+  };
+
   return (
     <section id="skills" className="skills">
       <PageHeaderContent
@@ -27,7 +35,11 @@ const Skills = () => {
                 transform: "translateX(0px)",
               }}
             >
-              <h3 className="skills__content-wrapper__inner-content__category-text">
+              <h3
+                className="skills__content-wrapper__inner-content__category-text"
+                onClick={() => handleCategoryClick(item.label)} // Add click handler
+                style={{ cursor: "pointer" }} // Change cursor to pointer on hover
+              >
                 {item.label}
               </h3>
               <div className="skills__content-wrapper__inner-content__progressbar-container">
@@ -58,4 +70,5 @@ const Skills = () => {
     </section>
   );
 };
+
 export default Skills;

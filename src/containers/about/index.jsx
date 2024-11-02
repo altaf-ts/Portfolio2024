@@ -3,34 +3,34 @@ import { BsInfoCircleFill } from "react-icons/bs";
 import PageHeaderContent from "../../components/pageHeaderContent";
 import { Animate } from "react-simple-animate";
 import "./styles.scss";
-import { DiApple, DiAndroid } from "react-icons/di";
-import { FaDev, FaDatabase } from "react-icons/fa";
+import { FaJava, FaDatabase, FaReact } from "react-icons/fa";
+import { SiSpringboot } from "react-icons/si"; 
 
 const personalDetails = [
   {
     label: "Name",
-    value: "John Doe",
+    value: "Altaf Shaikh",
   },
   {
     label: "Age",
-    value: "27",
+    value: "23",
   },
   {
     label: "Address",
-    value: "India",
+    value: "Pune-Maharashtra, India",
   },
   {
     label: "Email",
-    value: "demo@example.com",
+    value: "ashaikh20754@gmail.com",
   },
   {
     label: "Contact No",
-    value: "+11 3456789056",
+    value: "+91 7385274784",
   },
 ];
 
 const jobSummary =
-  "Seasoned and independent Front End Developer with 5 years of experience in blending the art of design with skill of programming to deliver an immersive and engaging user experience through efficient website development, proactive feature optimization, and relentless debugging. Very passionate about aesthetics and UI design. It is imperative that you provide a thorough and professional approach to your resume. As a Front End Developer you will be judged by your ability to use UX and UI concepts and follow design guidelines. It is about expressing your attention to detail and how you can help implement design ideas for your future employer";
+  "I recently graduated in 2024 from MMIT Pune with a strong passion for software development and full-stack development. I have a solid foundation in object-oriented programming and Java, complemented by hands-on experience in web development and design through an internship. I am eager to explore new opportunities that allow me to apply and expand my skills in the dynamic field of software development. I am always open to connecting with professionals in the industry to exchange knowledge and grow. Please feel free to reach out for any inquiries or collaborations.";
 
 const About = () => {
   return (
@@ -52,7 +52,7 @@ const About = () => {
               transform: "translatex(0px)",
             }}
           >
-            <h3>Front End Developer</h3>
+            <h3>Java Full Stack Developer</h3>
             <p>{jobSummary}</p>
           </Animate>
 
@@ -94,16 +94,16 @@ const About = () => {
           >
             <div className="about__content__servicesWrapper__innerContent">
               <div>
-                <FaDev size={60} color="var( --yellow-theme-main-color)" />
+                <FaJava size={60} color="var(--yellow-theme-main-color)" />
               </div>
               <div>
-                <DiAndroid size={60} color="var( --yellow-theme-main-color)" />
+                <FaDatabase size={60} color="var(--yellow-theme-main-color)" /> {/* SQL */}
               </div>
               <div>
-                <FaDatabase size={60} color="var( --yellow-theme-main-color)" />
+                <FaReact size={60} color="var(--yellow-theme-main-color)" />
               </div>
               <div>
-                <DiApple size={60} color="var( --yellow-theme-main-color)" />
+                <SiSpringboot size={60} color="var(--yellow-theme-main-color)" />
               </div>
             </div>
           </Animate>
@@ -112,4 +112,5 @@ const About = () => {
     </section>
   );
 };
+
 export default About;
